@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qiyuan Shi — CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+  @page { size: Letter; margin: 0.6in 0.65in; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto;
+    max-width: 7.2in;
+    padding: 24px 16px;
+    background: #fff;
+    color: #111;
+    font: 10.5pt/1.42 "Source Serif 4", Georgia, serif;
+  }
+  @media print { body { padding: 0; max-width: none; } }
+  a { color: inherit; text-decoration: none; }
+  h1 { font-size: 20pt; font-weight: 600; margin: 0; text-align: center; }
+  .contact { text-align: center; margin: 2px 0 10px; font-size: 10pt; }
+  h2 {
+    font-size: 11pt; font-weight: 600; text-transform: uppercase; letter-spacing: .06em;
+    margin: 12px 0 5px; padding-bottom: 2px; border-bottom: 1px solid #111;
+  }
+  .entry { margin-bottom: 7px; break-inside: avoid; }
+  .line { display: flex; justify-content: space-between; gap: 12px; }
+  .line b { font-weight: 600; }
+  .line .r { white-space: nowrap; }
+  .sub { font-style: italic; }
+  ul { margin: 2px 0 0; padding-left: 16px; }
+  li { margin: 1px 0; }
+  p { margin: 0; }
+</style>
+</head>
+<body>
+  <h1>Qiyuan Shi</h1>
+  <div class="contact">
+    Department of Computer Science, Rutgers University ·
+    <a href="mailto:qiyuanshi488@gmail.com">qiyuanshi488@gmail.com</a>
+  </div>
+
+  <h2>Research Interests</h2>
+  <p>Controllable and accountable large language models: activation steering, synthetic training data,
+    data-use auditing and membership inference, and LLM evaluation and safety.</p>
+
+  <h2>Education</h2>
+  <div class="entry">
+    <div class="line"><b>Rutgers University–New Brunswick</b><span class="r">Sep 2026 – present</span></div>
+    <div class="line"><span class="sub">PhD in Computer Science · Advisor: Prof. Ruixiang (Ryan) Tang</span><span class="r">New Brunswick, NJ</span></div>
+  </div>
+  <div class="entry">
+    <div class="line"><b>University of Science and Technology of China (USTC)</b><span class="r">Sep 2022 – Jul 2026</span></div>
+    <div class="line"><span class="sub">B.Eng. in Computer Science, School of the Gifted Young</span><span class="r">Hefei, China</span></div>
+    <ul>
+      <li>GPA: 85.53/100. Selected coursework: Fundamentals of Artificial Intelligence (98), Foundations of Algorithms (96),
+        Mathematical Analysis (96), Introduction to Deep Learning (94), Linear Algebra (92), Probability and Mathematical Statistics (90).</li>
+    </ul>
+  </div>
+
+  <h2>Manuscripts Under Review</h2>
+  <div class="entry"><p><b>UpdateSteer: Set-Conditioned Activation Control for Synthetic Training Data.</b> Under review, 2026.</p></div>
+  <div class="entry"><p><b>DAudit: Data-use Auditing of Large Language Models.</b> Under review, 2026.</p></div>
+  <div class="entry"><p><b>Membership Attribution against Large Language Models.</b> Under review, 2026.</p></div>
+
+  <h2>Research Experience</h2>
+  <div class="entry">
+    <div class="line"><b>UpdateSteer: Set-Conditioned Activation Control for Synthetic Data</b><span class="r">2026 – present</span></div>
+    <div class="line"><span class="sub">PhD research, Rutgers University</span></div>
+    <ul>
+      <li>Jointly selects activation interventions for a set of synthetic examples, using learner gradients to represent each example’s
+        update signal and set-level statistical matching to make examples complementary.</li>
+      <li>Evaluated on toxicity detection, reward modeling, verifiable instruction following, and prompt-injection detection.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="line"><b>DAudit: Data-use Auditing of Large Language Models</b><span class="r">Jul 2025 – Jan 2026</span></div>
+    <div class="line"><span class="sub">Research Assistant, Johns Hopkins University · Advisor: Prof. Yinzhi Cao</span></div>
+    <ul>
+      <li>Black-box auditing of whether specific data were used in post-training, under label-only and logits access, with formal
+        false-discovery-rate guarantees; supports copyright compliance and “Do-Not-Train” verification.</li>
+      <li>Proposed the DualBank alignment scheme and built the end-to-end pipeline: data marking, per-sample Shadow-LoRA training,
+        query scheduling, Δ-score computation, and sequential decision thresholds.</li>
+      <li>Ran ablations on paraphrase/noise level, bank size, LoRA rank, target layers, and constraint strength, plus runtime and
+        statistical-power analyses; co-authored the methods section.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="line"><b>Membership Attribution against Large Language Models</b><span class="r">Sep 2025 – Feb 2026</span></div>
+    <div class="line"><span class="sub">Research Assistant, Johns Hopkins University · Advisor: Prof. Yinzhi Cao</span></div>
+    <ul>
+      <li>Moved beyond binary membership inference to attributing <i>which</i> training stage used a sample, under low false-positive constraints.</li>
+      <li>Built attribution signals from cross-stage output-probability differences and trained a Transformer-based attack model;
+        adapted it to restricted-logit access via probability recovery and entropy features.</li>
+      <li>Reproduced Blind Attribution and six calibrated MI baselines; set up PT–PT (Pythia snapshots), FT–FT (FineWeb/UltraFeedback
+        with Llama 3/Qwen 3), and PT–FT (WikiMIA with Llama 2/GPT-J/Pythia/OPT) settings.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="line"><b>FairRO: Fairness without Demographics from a Robust Optimization Perspective</b><span class="r">Sep 2024 – 2026</span></div>
+    <div class="line"><span class="sub">Research Assistant, USTC · Advisor: Prof. Qi Liu</span></div>
+    <ul>
+      <li>Controls worst-group risk and exposure when only aggregate group proportions are known. Co-designed the ambiguity set and
+        min–max training objective.</li>
+      <li>Implemented the trainer and a pluggable re-ranking module; ran ablations on proportion misspecification, sample size,
+        loss families, and constraint strength; prepared reproducible scripts and documentation.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="line"><b>Intersectional Fairness Review and Benchmark</b><span class="r">Jul 2024 – Jan 2025</span></div>
+    <div class="line"><span class="sub">Research Assistant, USTC · Advisor: Prof. Qi Liu</span></div>
+    <ul>
+      <li>Implemented baselines and a unified prompting pipeline; ran multi-model, multi-dataset experiments with uncertainty analysis;
+        drafted the results and discussion.</li>
+    </ul>
+  </div>
+
+  <h2>Teaching</h2>
+  <div class="entry">
+    <div class="line"><span><b>Teaching Assistant</b>, Department of Computer Science, Rutgers University</span><span class="r">Fall 2026</span></div>
+  </div>
+
+  <h2>Honors and Awards</h2>
+  <div class="entry">
+    <div class="line"><span>Bronze Medal (team), ICPC China National Contest</span><span class="r">2024</span></div>
+    <div class="line"><span>First Prize, Anhui Provincial Robot Competition (Programming Track)</span><span class="r">2023</span></div>
+    <div class="line"><span>Second Prize, Anhui Provincial College Students’ Mathematics Competition</span><span class="r">2022</span></div>
+    <div class="line"><span>Outstanding Student Scholarship (Bronze), USTC</span><span class="r">2022</span></div>
+  </div>
+
+  <h2>Skills</h2>
+  <p><b>Languages:</b> Python, C++. <b>ML:</b> LoRA, DPO, RLHF, RAG, activation steering, membership inference.
+    <b>Tools:</b> LaTeX, MATLAB, Mathematica.</p>
+</body>
+</html>

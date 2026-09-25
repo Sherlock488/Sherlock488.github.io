@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qiyuan Shi</title>
+<meta name="description" content="Qiyuan Shi — PhD student in Computer Science at Rutgers University. LLM steering, synthetic data, and data-use auditing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --text: #1d1d1f;
+    --muted: #6b6b70;
+    --rule: #e4e2dc;
+    --accent: #b0112f;
+    --badge-bg: #f3ece6;
+    --badge-text: #8a3a1e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141416;
+      --text: #e8e6e1;
+      --muted: #9a9aa0;
+      --rule: #2c2c30;
+      --accent: #ff6b81;
+      --badge-bg: #2a2220;
+      --badge-text: #f0b49a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 72px 20px 56px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+  header { display: flex; align-items: center; gap: 28px; }
+  .photo { width: 132px; height: 132px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+  header h1 {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 1.15;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  header h1 .zh { font-size: 1.25rem; font-weight: 500; color: var(--muted); margin-left: .4rem; }
+  .role { color: var(--muted); margin: .5rem 0 1.1rem; }
+  .links { display: flex; flex-wrap: wrap; gap: .5rem 1.4rem; font-weight: 500; }
+
+  section { margin-top: 3rem; }
+  h2 {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 0 0 1rem;
+    padding-bottom: .4rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  p { margin: 0 0 1rem; }
+
+  .news { list-style: none; margin: 0; padding: 0; }
+  .news li { display: grid; grid-template-columns: 5.5rem 1fr; gap: 1rem; }
+  .news time { color: var(--muted); font-variant-numeric: tabular-nums; }
+
+  .paper { margin-bottom: 1.5rem; }
+  .paper:last-child { margin-bottom: 0; }
+  .paper-title { font-weight: 600; }
+  .paper-meta { color: var(--muted); font-size: .92rem; }
+  .paper-desc { font-size: .95rem; margin-top: .25rem; }
+  .badge {
+    display: inline-block;
+    font-size: .75rem;
+    font-weight: 600;
+    padding: .05rem .5rem;
+    border-radius: 999px;
+    background: var(--badge-bg);
+    color: var(--badge-text);
+    margin-right: .4rem;
+    vertical-align: 1px;
+  }
+
+  .rows { list-style: none; margin: 0; padding: 0; }
+  .rows li { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: .75rem; }
+  .rows .what { flex: 1; }
+  .rows .sub { color: var(--muted); font-size: .92rem; display: block; }
+  .rows .when { color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; font-size: .92rem; }
+
+  footer { margin-top: 3.5rem; color: var(--muted); font-size: .85rem; }
+
+  @media (max-width: 560px) {
+    main { padding-top: 48px; padding-left: 16px; padding-right: 16px; }
+    header { flex-direction: column; align-items: flex-start; gap: 18px; }
+    .photo { width: 104px; height: 104px; }
+    header h1 { font-size: 2rem; }
+    .news li { grid-template-columns: 1fr; gap: 0; margin-bottom: .6rem; }
+    .rows li { flex-direction: column; gap: 0; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img class="photo" src="photo.jpg" alt="Qiyuan Shi" width="132" height="132">
+    <div>
+    <h1>Qiyuan Shi<span class="zh">史启源</span></h1>
+    <p class="role">PhD Student, Computer Science · Rutgers University–New Brunswick</p>
+    <nav class="links">
+      <a href="mailto:qiyuanshi488@gmail.com">Email</a>
+      <a href="cv.pdf">CV (PDF)</a>
+    </nav>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I am a first-year PhD student in Computer Science at Rutgers University–New Brunswick, advised by
+      <a href="https://www.ruixiangtang.net/">Prof. Ruixiang (Ryan) Tang</a>.
+      I work on making large language models more controllable and more accountable: activation steering,
+      synthetic training data, and auditing how models use their training data.</p>
+    <p>Before Rutgers, I received my B.Eng. in Computer Science from the School of the Gifted Young at the
+      University of Science and Technology of China (USTC). I worked with
+      <a href="https://yinzhicao.org/">Prof. Yinzhi Cao</a> at Johns Hopkins University on data-use auditing and
+      membership inference, and with <a href="http://staff.ustc.edu.cn/~qiliuql/">Prof. Qi Liu</a> at USTC on fairness.</p>
+  </section>
+
+  <section id="news">
+    <h2>News</h2>
+    <ul class="news">
+      <li><time>Sep 2026</time><span>Started my PhD in Computer Science at Rutgers.</span></li>
+    </ul>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+
+    <div class="paper">
+      <div class="paper-title">UpdateSteer: Set-Conditioned Activation Control for Synthetic Training Data</div>
+      <div class="paper-meta"><span class="badge">Under review</span>Rutgers · advised by Ruixiang Tang</div>
+      <div class="paper-desc">Jointly chooses activation interventions for a whole set of synthetic examples, using learner gradients
+        and set-level matching so that each example adds a complementary training signal.</div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-title">DAudit: Data-use Auditing of Large Language Models</div>
+      <div class="paper-meta"><span class="badge">Under review</span>JHU · advised by Yinzhi Cao</div>
+      <div class="paper-desc">Black-box auditing of whether specific data was used to post-train an LLM, under label-only or logits
+        access, with formal false-discovery-rate guarantees.</div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-title">Membership Attribution against Large Language Models</div>
+      <div class="paper-meta"><span class="badge">Under review</span>JHU · advised by Yinzhi Cao</div>
+      <div class="paper-desc">Extends membership inference from “was this sample used?” to “in which training stage was it used?”,
+        under low false-positive constraints and restricted logit access.</div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul class="rows">
+      <li><span class="what">PhD in Computer Science<span class="sub">Rutgers University–New Brunswick</span></span><span class="when">2026 – present</span></li>
+      <li><span class="what">B.Eng. in Computer Science<span class="sub">School of the Gifted Young, USTC</span></span><span class="when">2022 – 2026</span></li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul class="rows">
+      <li><span class="what">Teaching Assistant<span class="sub">Department of Computer Science, Rutgers</span></span><span class="when">Fall 2026</span></li>
+      <li><span class="what">Research Assistant, Prof. Yinzhi Cao<span class="sub">Johns Hopkins University</span></span><span class="when">2025 – 2026</span></li>
+      <li><span class="what">Research Assistant, Prof. Qi Liu<span class="sub">USTC</span></span><span class="when">2024 – 2026</span></li>
+    </ul>
+  </section>
+
+  <section id="awards">
+    <h2>Honors</h2>
+    <ul class="rows">
+      <li><span class="what">Bronze Medal (team), ICPC China National Contest</span><span class="when">2024</span></li>
+      <li><span class="what">First Prize, Anhui Provincial Robot Competition (Programming Track)</span><span class="when">2023</span></li>
+      <li><span class="what">Second Prize, Anhui Provincial College Students’ Mathematics Competition</span><span class="when">2022</span></li>
+      <li><span class="what">Outstanding Student Scholarship (Bronze), USTC</span><span class="when">2022</span></li>
+    </ul>
+  </section>
+
+  <footer>Last updated September 2026</footer>
+</main>
+</body>
+</html>
