@@ -86,6 +86,9 @@
     margin-right: .4rem;
     vertical-align: 1px;
   }
+  .badge.pub { background: var(--accent); color: var(--bg); }
+  .paper-authors { font-size: .92rem; }
+  .paper-authors b { font-weight: 600; }
 
   .rows { list-style: none; margin: 0; padding: 0; }
   .rows li { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: .75rem; }
@@ -134,12 +137,21 @@
   <section id="news">
     <h2>News</h2>
     <ul class="news">
+      <li><time>Sep 2026</time><span>Our intersectional fairness benchmark paper was accepted to the EMNLP 2026 Main Conference.</span></li>
       <li><time>Sep 2026</time><span>Started my PhD in Computer Science at Rutgers.</span></li>
     </ul>
   </section>
 
   <section id="research">
     <h2>Research</h2>
+
+    <div class="paper">
+      <div class="paper-title">Beyond Single-Attribute Auditing: A Configurable Multi-Attribute Benchmark for Intersectional Fairness in LLMs</div>
+      <div class="paper-authors">Zheng Zhang, Yifan Wu, Yuxiang Zhou, Qi Liu, Qingyang Mao, Ning Li, Weibo Gao, <b>Qiyuan Shi</b>, Zhenya Huang, Baosheng Yu</div>
+      <div class="paper-meta"><span class="badge pub">EMNLP 2026</span>Main Conference</div>
+      <div class="paper-desc">A configurable benchmark for auditing LLM fairness across combinations of demographic attributes,
+        rather than one attribute at a time.</div>
+    </div>
 
     <div class="paper">
       <div class="paper-title">UpdateSteer: Set-Conditioned Activation Control for Synthetic Training Data</div>
